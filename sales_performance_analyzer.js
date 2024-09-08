@@ -6,7 +6,6 @@ function calculateAverageSales(salesAmount) {
 }
 
 // Task 2: Create a Function to Determine Performance Rating
-const averageSales = totalSales/salesAmount.length;
 function determinePerformanceRating(averageSales) { 
     if (averageSales > 10000) return "Excellent"; // Sales amounts above 10,000
     else if (averageSales >= 7000) return "Good"; // Sales amounts between 7,000 and 10,000
