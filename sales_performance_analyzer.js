@@ -73,6 +73,6 @@ const salesData = [
 
 // Testing the generatePerformanceReport function with sample data
 console.log(generatePerformanceReport(salesData));
-]
+
 
 
