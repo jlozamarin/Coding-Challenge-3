@@ -1,7 +1,7 @@
 // Task 1: Create a Function to Calculate Average Sales
 function calculateAverageSales(salesAmount) { 
     if (salesAmount.length === 0) return 0;
-    const totalSales = salesAmount.reduce((acc, curr) => acc + curr, 0);
+    var totalSales = salesAmount.reduce((acc, curr) => acc + curr, 0);
     return totalSales / salesAmount.length;
 }
 
@@ -38,9 +38,9 @@ return result;
 function generatePerformanceReport(salesRecords) {
 
     // Individual reports
-    const salesReports = salesRecords.map(record => {
-        const averageSales = calculateAverageSales(record.salesFigures)
-        const performanceRating = determinePerformanceRating(averageSales);
+    var salesReports = salesRecords.map(record => {
+        var averageSales = calculateAverageSales(record.salesFigures)
+        var performanceRating = determinePerformanceRating(averageSales);
 return {
     name: record.name,
     averageSales: averageSales,
@@ -48,7 +48,7 @@ return {
  };
 });
     // Find top and bottom performers
-    const topBottomPerformers = findTopAndBottomPerformers(
+    var topBottomPerformers = findTopAndBottomPerformers(
         salesRecords.map(record => ({
             name: record.name,
             totalSales: record.salesFigures.reduce((acc, curr) => acc + curr, 0),
