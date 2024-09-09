@@ -39,14 +39,13 @@ function generatePerformanceReport(salesRecords) {
 
     // Individual reports
     const salesReports = salesRecords.map(record => {
-        const averageSales = calculateAverageSales(record.salesFigures);
-        const performanceRating = determinePerformanceRating(averageSales); }
+        const averageSales = calculateAverageSales(record.salesFigures)
+        const performanceRating = determinePerformanceRating(averageSales);
 return {
     name: record.name,
     averageSales: averageSales,
     performanceRating: performanceRating
-
-};
+ };
 });
     // Find top and bottom performers
     const topBottomPerformers = findTopAndBottomPerformers(
@@ -59,8 +58,8 @@ return {
     // Format the report
     return {
         individualReports: salesReports,
-        topPerformer: topBottomPerformers.topPerformer ? topBottomPerformers.topPerformer.name :,
-        bottomPerformer: topBottomPerformers.bottomPerformer ? topBottomPerformers.bottomPerformer.name : 
+        topPerformer: topBottomPerformers.topPerformer ? topBottomPerformers.topPerformer.name : 'N/A',
+        bottomPerformer: topBottomPerformers.bottomPerformer ? topBottomPerformers.bottomPerformer.name : 'N/A'
     };
 }
 
