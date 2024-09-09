@@ -46,7 +46,8 @@ return {
     averageSales: averageSales,
     performanceRating: performanceRating
 
-}
+};
+});
     // Find top and bottom performers
     const topBottomPerformers = findTopAndBottomPerformers(
         salesRecords.map(record => ({
