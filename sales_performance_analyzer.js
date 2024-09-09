@@ -35,24 +35,33 @@ return result;
 
 // Task 4: Combine Functions to Generate a Performance Report
 
-function generatePerformanceReport(salesData) {
-        const averageSales = calculateAverageSales(salesreps.sales);
-        const performanceRating = determinePerformanceRating(averageSales); }
+function generatePerformanceReport(salesRecords) {
 
+    // Individual reports
+    const salesReports = salesRecords.map(record => {
+        const averageSales = calculateAverageSales(record.salesFigures);
+        const performanceRating = determinePerformanceRating(averageSales); }
+return {
+    name: record.name,
+    averageSales: averageSales,
+    performanceRating: performanceRating
+
+}
     // Find top and bottom performers
     const topBottomPerformers = findTopAndBottomPerformers(
-        salesData.map(salesperson => ({
-            name: salesreps.name,
-            totalSales: salesreps.sales.reduce((acc, curr) => acc + curr, 0),
+        salesRecords.map(record => ({
+            name: record.name,
+            totalSales: record.salesFigures.reduce((acc, curr) => acc + curr, 0),
         }))
     );
 
     // Format the report
     return {
         individualReports: salesReports,
-        topPerformer: topBottomPerformers.topPerformer ? topBottomPerformers.topPerformer.name : 'N/A',
-        bottomPerformer: topBottomPerformers.bottomPerformer ? topBottomPerformers.bottomPerformer.name : 'N/A'
+        topPerformer: topBottomPerformers.topPerformer ? topBottomPerformers.topPerformer.name :,
+        bottomPerformer: topBottomPerformers.bottomPerformer ? topBottomPerformers.bottomPerformer.name : 
     };
+}
 
 
 
