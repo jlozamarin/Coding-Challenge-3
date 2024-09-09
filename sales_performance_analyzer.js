@@ -33,3 +33,26 @@ return result;
     },{ topPerformer: null, bottomPerformer: null });
 }
 
+// Task 4: Combine Functions to Generate a Performance Report
+
+function generatePerformanceReport(salesData) {
+        const averageSales = calculateAverageSales(salesreps.sales);
+        const performanceRating = determinePerformanceRating(averageSales); }
+
+    // Find top and bottom performers
+    const topBottomPerformers = findTopAndBottomPerformers(
+        salesData.map(salesperson => ({
+            name: salesreps.name,
+            totalSales: salesreps.sales.reduce((acc, curr) => acc + curr, 0),
+        }))
+    );
+
+    // Format the report
+    return {
+        individualReports: salesReports,
+        topPerformer: topBottomPerformers.topPerformer ? topBottomPerformers.topPerformer.name : 'N/A',
+        bottomPerformer: topBottomPerformers.bottomPerformer ? topBottomPerformers.bottomPerformer.name : 'N/A'
+    };
+
+
+
