@@ -65,14 +65,16 @@ return {
 
 // Task 5: Test Your Functions with Sample Data
 const salesData = [
-    { name: 'Alice', salesFigures: [12000, 15000, 13000] },
-    { name: 'Bob', salesFigures: [7000, 6000, 7500] },
-    { name: 'Charlie', salesFigures: [3000, 4000, 3500] },
-    { name: 'Diana', salesFigures: [9000, 8500, 9200] },
+    { name: 'Alice', salesFigures: [12000, 15000, 13000] }, // Excellent
+    { name: 'Bob', salesFigures: [7000, 6000, 7500] }, // Satisfactory
+    { name: 'Charlie', salesFigures: [3000, 4000, 3500] }, // Needs Improvement
+    { name: 'Diana', salesFigures: [9000, 8500, 9200] }, // Good
 ];
 
 // Testing the generatePerformanceReport function with sample data
-console.log(generatePerformanceReport(salesData));
+console.log(generatePerformanceReport(salesData)); 
+
+//Results: Bottom Performer - Charlie, Top Performer - Alice
 
 
 
